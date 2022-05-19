@@ -3,6 +3,34 @@ const btns = wrap.querySelectorAll('#navi li')
 const panels = wrap.querySelectorAll('section article')
 const vids = wrap.querySelectorAll('section article video')
 
+// 초기 비디오 정지
+vids.forEach(vid => {
+    vid.pause();
+})
+
+
+// 메인페이지 비디오 재생
+panels.forEach((panel, index) => {
+    if(panels[index].classList.contains('on')){
+        vids[index].play()
+    }
+})
+
+// 버튼 클릭시 해당 비디오 재생 및 그외 비디오 정지
+btns.forEach((btn, index) => {
+    btn.addEventListener('click', () =>{
+        
+        vids.forEach(vid => {
+            vid.pause();
+        })
+
+        vids[index].play()
+    })
+})
+
+
+
+
 btns.forEach((btn, index) => {
     btn.addEventListener('click', e => {
         for(let i=0; i<btns.length; i++){
@@ -25,30 +53,14 @@ btns.forEach((btn, index) => {
                 }
             }
             panels[index].classList.remove('lower')
-            panels[index].classList.add('on')
-
-            // vids.forEach(vid => {
-            //     vid.pause()
-
-            //     if(panels[i].classList.contains('on')){
-            //         vid.play()
-            //     }
-            // })
-
-            
+            panels[index].classList.add('on')              
 
         }, 1400)
+
+
+
+        
     })
 })
 
 
-
-
-
-// function playVid() {
-//     vid.play();
-// }
-
-// function pauseVid() {
-//     vid.pause();
-// }
