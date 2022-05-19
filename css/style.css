@@ -25,7 +25,7 @@ header {
   left: 0px;
   width: 450px;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(2px);
   z-index: 4;
 }
@@ -91,6 +91,7 @@ header #navi li.on {
 }
 header #navi li.on h2::after {
   width: 150px;
+  background: #0967ff;
 }
 
 section {
@@ -147,7 +148,7 @@ section article .slogan h2 {
 }
 section article .slogan h2 .inner {
   position: relative;
-  font: normal 130px/1 "Abril Fatface";
+  font: normal 100px/1 "Abril Fatface";
   color: #fff;
   transform: scaleY(1.25);
   opacity: 0;
