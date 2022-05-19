@@ -55,7 +55,7 @@ btns.forEach((btn, index) => {
             panels[index].classList.remove('lower')
             panels[index].classList.add('on')              
 
-        }, 1400)
+        }, 1600)
 
 
 
